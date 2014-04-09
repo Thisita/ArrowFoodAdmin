@@ -1,4 +1,4 @@
-//
+//-
   ArrowFoodAdmin
   Copyright © 2014 Ian Zachary Ledrick, also known as Thisita.
    
@@ -16,19 +16,9 @@
    
   You should have received a copy of the GNU General Public License
   along with ArrowFoodAdmin.  If not, see <http://www.gnu.org/licenses/>.
-doctype html
-html(lang="en")
-  head
-    title= pageTitle
-  body
-    h1 Jade - node template engine
-    #container.col
-      if youAreUsingJade
-        p You are amazing
-      else
-        p Get on it!
-      p.
-        Jade is a terse and simple
-        templating language with a
-        strong focus on performance
-        and powerful features.
+extends layout
+
+block content
+  h3 Title
+  p.lead This is the lead paragraph.
+  p This is another paragraph.
