@@ -27,9 +27,17 @@ block content
       fieldset(data-role='controlgroup')
         label(for='name') Name:
            input(id='name',type='text',value='',name='name')
-    div#passworddiv(data-role='fieldcontain')
+    div(data-role='fieldcontain')
       fieldset(data-role='controlgroup')
         label(for='address') Address:
            input(id='address',type='address',value='',name='address')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='email') Email:
+           input(id='email',type='email',value='',name='email')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='phone') Phone:
+           input(id='phone',type='phone',value='',name='phone')
     div(data-role='fieldcontain')   
       input(type='submit',value='Submit',data-transition='fade', data-theme='c')
