@@ -25,10 +25,10 @@ module.exports = function(app, express) {
   // global config
   app.use(require('morgan')());
   // Middleware for HTML serving
-  app.set('views', path.join(__dirname, 'views'));
+  app.set('views', path.join(__dirname, '../views'));
   app.set('view engine', 'jade');
-  app.use(require('stylus').middleware(path.join(__dirname, 'public')));
-  app.use(require('serve-static')(path.join(__dirname, 'public')));
+  app.use(require('stylus').middleware(path.join(__dirname, '../public')));
+  app.use(require('serve-static')(path.join(__dirname, '../public')));
   
   // dev config
   if(process.env.NODE_ENV == 'development') {
