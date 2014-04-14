@@ -21,27 +21,23 @@
 
 module.exports = function(app, express) {
   // global config
-  app.configure(function() {
-    app.use(express.logger());
-    // routing
-    app.use(app.router);
-    // Middleware for HTML serving
-    app.set('views', path.join(__dirname, 'views'));
-    app.set('view engine', 'jade');
-    app.use(require('stylus').middleware(path.join(__dirname, 'public')));
-    app.use(express.static(path.join(__dirname, 'public')));
-  });
+  app.use(express.logger());
+  // routing
+  app.use(app.router);
+  // Middleware for HTML serving
+  app.set('views', path.join(__dirname, 'views'));
+  app.set('view engine', 'jade');
+  app.use(require('stylus').middleware(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(__dirname, 'public')));
   
   // dev config
-  app.configure('development', function() {
+  if(process.env.NODE_ENV == 'development') {
     app.use(express.errorHandler({
       dumpExceptions: true,
       showStack: true
     }));
-  });
-  
-  // prod config
-  app.configure('production', function() {
+  } else {
+    // prod config
     app.use(express.errorHandler());
-  });
+  }
 };
