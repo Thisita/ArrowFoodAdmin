@@ -20,12 +20,12 @@
 'use strict';
 
 // Route handling function
-function menuItemAdd(req, res) {
+function menuItemsAdd(req, res) {
   // Render the jade add menu items page
-	res.render("menuItemAdd", {});
+	res.render("menuItemsAdd", {});
 }
 
 // Export the route association function
 module.exports = function(app) {
-  app.get('/menuitem/add', menuItemAdd);
+  app.get('/menuitem/add', menuItemsAdd);
 };
