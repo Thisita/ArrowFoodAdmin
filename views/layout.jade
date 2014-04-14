@@ -41,10 +41,33 @@ html(lang='en')
           ul.nav.navbar-nav
             li
               a(href='/') Home
-            li
-              a(href='/restaurant/add') Add Restaurant
-            li
-              a(href='/foo.html') foo
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Restaurant
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='/restaurant/add') Add Restaurant
+                li
+                  a(href='/restaurant/remove') Remove Restaurant
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Menu
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='/menu/add') Add Menu
+                li
+                  a(href='/menu/remove') Remove Menu
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Menu Items
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='/menuitems/add') Add Menu Items
+                li
+                  a(href='/menuitems/remove') Remove Menu Items
     .container
       block content
     script(src='/javascripts/jquery-2.0.3.min.js')
