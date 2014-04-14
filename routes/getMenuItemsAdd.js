@@ -27,5 +27,5 @@ function menuItemsAdd(req, res) {
 
 // Export the route association function
 module.exports = function(app) {
-  app.get('/menuitem/add', menuItemsAdd);
+  app.get('/menuitems/add', menuItemsAdd);
 };
