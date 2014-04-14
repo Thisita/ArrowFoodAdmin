@@ -20,23 +20,9 @@
 'use strict';
 
 module.exports = function(app, express) {
-  var MongoStore = require('connect-mongo')(express);
   // global config
   app.configure(function() {
     app.use(express.logger());
-    // session
-    app.use(express.cookieParser());
-    app.use(express.session({
-      secret: 'random_data',
-      maxAge: new Date(Date.now() + 3600000),
-      store: new MongoStore({
-        db: 'express-sessions',
-        host: 'localhost',
-        port: 10072,
-        username: 'admin',
-        password: 'admin'
-      })
-    }));
     // routing
     app.use(app.router);
     // Middleware for HTML serving

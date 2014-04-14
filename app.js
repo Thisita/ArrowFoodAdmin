@@ -27,7 +27,7 @@ var app = module.exports = express();
 
 // Delegate work
 require('./configuration')(app, express);
-require('./routes')(app, db);
+require('./routes')(app);
 
 // Get the port
 var port = Number(process.env.PORT || 8080);

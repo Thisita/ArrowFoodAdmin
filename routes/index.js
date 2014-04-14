@@ -1,4 +1,4 @@
-/*
+﻿/*
     ArrowFoodAdmin
     Copyright © 2014 Ian Zachary Ledrick, also known as Thisita.
     
@@ -23,13 +23,13 @@
 var fs = require('fs');
 var path = require('path');
 
-module.exports = function(app, db) {
+module.exports = function(app) {
   // Look for route modules
   fs.readdirSync('./routes').forEach(function(file) {
     // Don't read this one again
     if(file === path.basename(__filename)) return;
     
     // Load the route file
-    require('./' + file)(app, db);
+    require('./' + file)(app);
   });
 };
