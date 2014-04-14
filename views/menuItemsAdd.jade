@@ -26,6 +26,23 @@ block content
     div(data-role='fieldcontain')
       fieldset(data-role='controlgroup')
         label(for='name') Name:
-           input(id='name',type='text',value='',name='name')
+          input(id='name',type='text',value='',name='name')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='price') Price:
+          input(id='price',type='text',value='',name='price')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='description') Description:
+          input(id='description',type='text',value='',name='description')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')                                           
+        label(for='options') Options:
+          select(id='options')
+            option(value='required') Required
+            option(value='select') Select
+            option(value='checkbox') Checkbox
+            option(value='radio') Radio
+            option(value='text') Text
     div(data-role='fieldcontain')
       input(type='submit',value='Submit',data-transition='fade', data-theme='c')
