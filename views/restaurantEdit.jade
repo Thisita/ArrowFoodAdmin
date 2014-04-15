@@ -1,0 +1,52 @@
+//-
+  ArrowFoodAdmin
+  Copyright © 2014 Ian Zachary Ledrick, also known as Thisita.
+   
+  This file is part of ArrowFoodAdmin.
+   
+  ArrowFoodAdmin is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+   
+  ArrowFoodAdmin is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+   
+  You should have received a copy of the GNU General Public License
+  along with ArrowFoodAdmin.  If not, see <http://www.gnu.org/licenses/>.
+extends layout
+
+block content
+  h3 Add a restaurant
+  p Enter restaurant details:
+  div
+  form(action='',method='post')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='cname') Current Name:
+           input(id='cname',type='text',value='',name='cname')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='caddress') Current Address:
+           input(id='caddress',type='address',value='',name='caddress')
+    div Leave input blank if unchanged.
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='nname') New Name:
+           input(id='nname',type='text',value='',name='nname')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='naddress') New Address:
+           input(id='naddress',type='address',value='',name='naddress')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='email') Email:
+           input(id='email',type='email',value='',name='email')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='phone') Phone:
+           input(id='phone',type='phone',value='',name='phone')
+    div(data-role='fieldcontain')   
+      input(type='submit',value='Submit',data-transition='fade', data-theme='c')
