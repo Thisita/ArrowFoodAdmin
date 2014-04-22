@@ -1,4 +1,3 @@
-alert("loaded");
 $.ajax({
   dataType: "json",
   url: "http://rest.arrow.thisita.net/restaurants",
