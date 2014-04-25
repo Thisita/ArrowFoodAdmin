@@ -31,15 +31,31 @@ block content
       fieldset(data-role='controlgroup')
         label(for='restaurantAddress') Restaurant address:
           select(id='restaurantAddress')
-    div Leave input blank if unchanged.
+    div Be aware that changing the above fields will overwrite anything done below.
     div(data-role='fieldcontain')
       fieldset(data-role='controlgroup')
         label(for='nname') New Name:
            input(id='nname',type='text',value='',name='nname')
     div(data-role='fieldcontain')
       fieldset(data-role='controlgroup')
+        label(for='nan') New Address Name:
+           input(id='nan',type='text',value='',name='nan')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
         label(for='naddress') New Address:
            input(id='naddress',type='address',value='',name='naddress')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='nac') New City:
+           input(id='nac',type='text',value='',name='nac')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='nas') New State:
+           input(id='nas',type='text',value='',name='nas')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='nzip') New ZIP:
+           input(id='nzip',type='address',value='',name='nzip')
     div(data-role='fieldcontain')
       fieldset(data-role='controlgroup')
         label(for='email') Email:
