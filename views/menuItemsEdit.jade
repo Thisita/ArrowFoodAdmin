@@ -23,10 +23,18 @@ block content
   p Enter menu item details:
   div
   form(action='',method='post')
+     div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='restaurantName') Restaurant name:
+          select(id='restaurantName')
     div(data-role='fieldcontain')
       fieldset(data-role='controlgroup')
-        label(for='cname') Current Name:
-          input(id='cname',type='text',value='',name='cname')
+        label(for='menuName') Menu:
+          select(id='menuName')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='menuItemName') Menu Item:
+          select(id='menuItemName')
     div Leave blank if unchanged
     div(data-role='fieldcontain')
       fieldset(data-role='controlgroup')
@@ -51,3 +59,5 @@ block content
             option(value='text') Text
     div(data-role='fieldcontain')
       input(type='submit',value='Submit',data-transition='fade', data-theme='c')
+      
+  script(src="/javascripts/menuItemsEdit.js").
