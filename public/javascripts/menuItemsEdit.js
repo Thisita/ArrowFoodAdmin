@@ -66,4 +66,16 @@ function menuItemNames(items){
                     text : items[i].name
                 }));
   }
+  select.change(function() {
+    setNewItem(items[select[0].selectedIndex]);
+  }).change();
+}
+
+function setNewItem(item){
+    var nname = $('#nname');
+    nname.val(item.name);
+    var price = $('#price');
+    price.val(item.price);
+    var description = $('#description');
+    description.val(item.description);
 }
