@@ -36,6 +36,7 @@ function restaurantNames(restaurants, menus){
   }
   select.change(function() {
     menuNames(menus[select.val()]);
+    setNewRestaurant(select.val());
   }).change();
 }
 
@@ -48,4 +49,15 @@ function menuNames(menus){
                     text : menus[i]
                 }));
   }
+  select.change(function() {
+    setNewMenu(select.val());
+  }).change();
+}
+function setNewRestaurant(name){
+  var input = $('#nrestaurant');
+  input.val( name);
+}
+function setNewMenu(name){
+  var input = $('#nname');
+  input.val( name);
 }
