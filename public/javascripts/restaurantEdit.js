@@ -29,6 +29,7 @@ function restaurantNames(names, addresses){
   }
   select.change(function() {
     restaurantAddresses(addresses[select.val()]);
+    setNewName(select.val());
   }).change();
 }
 
@@ -42,4 +43,15 @@ function restaurantAddresses(addresses){
                     text : text
                 }));
   }
+  select.change(function(){
+  //  setNewAddress(select.val());
+  }).change();
 }
+function setNewName(name){
+  var input = $('#nname');
+  input.val( name);
+}
+//function setNewAddress(address){
+ // var input = $('#naddress');
+  //input.val(address);
+//}
