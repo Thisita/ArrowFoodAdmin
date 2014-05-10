@@ -1,7 +1,7 @@
 
 $.ajax({
   dataType: "json",
-  url: "http://rest-arrow.herokuapp.com//restaurants",
+  url: "http://rest-arrow.herokuapp.com/restaurants",
   success: function(data) {
     if(data){
       var names =[];
