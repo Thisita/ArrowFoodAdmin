@@ -38,7 +38,7 @@ function restAdd(req, res) {
 	},
 	function (error, response, body)
 	{
-	};
+	}
   });
 }
 
