@@ -20,7 +20,8 @@
 'use strict';
 
 // Imports
-var express = require('express');
+var express = require('express')
+  , routes = require('./routes');
 
 // Create the app
 var app = module.exports = express();
