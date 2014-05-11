@@ -19,6 +19,8 @@
 */
 'use strict';
 
+var easypost = require('easypost');
+
 // Route handling function
 function restaurantAdd(req, res) {
   // Render the jade add restaurant page
@@ -28,4 +30,12 @@ function restaurantAdd(req, res) {
 // Export the route association function
 module.exports = function(app) {
   app.get('/restaurant/add', restaurantAdd);
+};
+
+exports.restaurantAdd = function(req, res)
+{
+  easypost.get(req, res, function(data) {
+    data = JSON.parse(data);
+	console.log("I AM WORKING");
+  });
 };
