@@ -38,6 +38,7 @@ function restAdd(req, res) {
 	},
 	function (error, response, body)
 	{
+	  res.send(response);
 	});
   });
 }
