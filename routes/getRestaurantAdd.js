@@ -19,7 +19,6 @@
 */
 'use strict';
 
-var easypost = require('easypost');
 var request = require('request');
 
 // Route handling function
@@ -29,7 +28,7 @@ function restaurantAdd(req, res) {
 }
 
 function restAdd(req, res) {
-  easypost.get(req, res, function(data) {
+	var data = req.body;
 	console.log("name: " + data.name + ", address: " + data.address + ", email: " + data.email + ", phone: " + data.phone);
 	request({
 	  method: 'POST',
@@ -40,7 +39,6 @@ function restAdd(req, res) {
 	{
 	  res.send(response);
 	});
-  });
 }
 
 // Export the route association function
