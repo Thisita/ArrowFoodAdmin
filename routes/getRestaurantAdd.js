@@ -20,6 +20,7 @@
 'use strict';
 
 var easypost = require('easypost');
+var request = require('request');
 
 // Route handling function
 function restaurantAdd(req, res) {

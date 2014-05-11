@@ -12,7 +12,8 @@
     "morgan": "*",
     "jade": "*",
     "stylus": "*",
-	"easypost": "*"
+	"easypost": "*",
+	"request": "*"
   },
   "scripts": {
 	 "start": "node app.js"
