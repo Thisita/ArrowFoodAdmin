@@ -18,9 +18,9 @@
   along with ArrowFoodAdmin.  If not, see <http://www.gnu.org/licenses/>.
 extends layout
 
-block content
+block head
   script.
-    jQuery( function() {
+    $(document).ready(function() {
       $("#restaurantAddForm").submit(function(event)
       {
         console.log("I AM BEING CALLED. YOU ARE NOT CRAZY.");
@@ -36,7 +36,9 @@ block content
   
         $.post(url, { name: restaurantName, addresses: [ name: "default", line1: restaurantAddress, line2: null, city: "Louisville", state: "KY", zip: "40203" ], emails: [ name: "default", address: restaurantEmail ], phones: [ name: "default", number: restaurantPhone ] });
       });
-    }
+    });
+
+block content
   h3 Add a restaurant
   p Enter restaurant details:
   div
