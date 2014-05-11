@@ -27,15 +27,15 @@ function restaurantAdd(req, res) {
 	res.render("restaurantAdd", {});
 }
 
-// Export the route association function
-module.exports = function(app) {
-  app.get('/restaurant/add', restaurantAdd);
-};
-
-exports.restaurantAdd = function(req, res)
-{
+function restAdd(req, res) {
   easypost.get(req, res, function(data) {
     data = JSON.parse(data);
 	console.log("I AM WORKING");
   });
+}
+
+// Export the route association function
+module.exports = function(app) {
+  app.get('/restaurant/add', restaurantAdd);
+  app.post('/restaurant/add', restAdd);
 };
