@@ -21,7 +21,6 @@
 
 // Imports
 var express = require('express');
-var jquery = require('jquery');
 
 // Create the app
 var app = module.exports = express();
