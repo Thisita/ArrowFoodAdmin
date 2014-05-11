@@ -28,19 +28,17 @@ function restaurantAdd(req, res) {
 }
 
 function restAdd(req, res) {
-	var data = req.body;
 	console.log(req.body.name);
 	//console.log("name: " + data.name + ", address: " + data.address + ", email: " + data.email + ", phone: " + data.phone);
-	//request({
-	 // method: 'POST',
-	  //uri: 'http://rest-arrow.herokuapp.com/restaurant',
-	  //body: JSON.stringify({ name: data.name, addresses: [], emails: [], phones: [] })
-	//},
-	//function (error, response, body)
-	//{
-	//  res.send(response);
-	//});
-	res.send(200);
+	request({
+	  method: 'POST',
+	  uri: 'http://rest-arrow.herokuapp.com/restaurant',
+	  body: JSON.stringify({ name: req.body.name, addresses: [], emails: [], phones: [] })
+	},
+	function (error, response, body)
+	{
+	  res.send(200);
+	});
 }
 
 // Export the route association function
