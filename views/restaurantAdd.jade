@@ -55,6 +55,8 @@ block content
           restaurantPhone = $form.find("input[name='phone']").val(),
           url = $form.attr("action");
   
-        $.post(url, { name: restaurantName, addresses: [ name: "default", line1: restaurantAddress, line2: null, city: "Louisville", state: "KY", zip: "40203" ], emails: [ name: "default", address: restaurantEmail ], phones: [ name: "default", number: restaurantPhone ] });
+        $.post(url, { name: restaurantName, addresses: [ name: "default", line1: restaurantAddress, line2: null, city: "Louisville", state: "KY", zip: "40203" ], 
+		emails: [ name: "default", address: restaurantEmail ], phones: [ name: "default", number: restaurantPhone ] });
+		return false;
       });
     };
