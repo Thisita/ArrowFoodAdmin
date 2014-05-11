@@ -11,7 +11,8 @@
     "serve-static": "*",
     "morgan": "*",
     "jade": "*",
-    "stylus": "*"
+    "stylus": "*",
+	"easypost": "*"
   },
   "scripts": {
 	 "start": "node app.js"
