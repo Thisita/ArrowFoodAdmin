@@ -29,8 +29,7 @@ function restaurantAdd(req, res) {
 
 function restAdd(req, res) {
   easypost.get(req, res, function(data) {
-    data = JSON.parse(data);
-	console.log("I AM WORKING");
+	console.log("I AM WORKING, HERE IS MY DATA " + data);
   });
 }
 
