@@ -21,9 +21,10 @@ extends layout
 block head
   script.
     $(document).ready(function() {
+      console.log("I AM BEING CALLED. YOU ARE NOT CRAZY.");
       $("#restaurantAddForm").submit(function(event)
       {
-        console.log("I AM BEING CALLED. YOU ARE NOT CRAZY.");
+        
         // stop form from submitting normally
         event.preventDefault();
   
