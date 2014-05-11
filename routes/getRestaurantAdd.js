@@ -28,7 +28,7 @@ function restaurantAdd(req, res) {
 }
 
 function restAdd(req, res) {
-	console.log(req.body.name);
+	console.log(JSON.stringify({ name: req.body.name, addresses: [], emails: [], phones: [] }));
 	//console.log("name: " + data.name + ", address: " + data.address + ", email: " + data.email + ", phone: " + data.phone);
 	request({
 	  method: 'POST',
