@@ -22,7 +22,7 @@ block content
   h3 Add a restaurant
   p Enter restaurant details:
   div
-  form(action='http://rest-arrow.herokuapp.com/restaurant/' id="restaurantAddForm")
+  form(action='http://rest-arrow.herokuapp.com/restaurant/' method='post')
     div(data-role='fieldcontain')
       fieldset(data-role='controlgroup')
         label(for='name') Name:
@@ -41,4 +41,3 @@ block content
            input(id='phone',type='phone',value='',name='phone')
     div(data-role='fieldcontain')   
       input(type='submit',value='Submit',data-transition='fade', data-theme='c') 
-  script(src="/javascripts/postRestaurant.js").
