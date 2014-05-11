@@ -29,6 +29,8 @@ var app = module.exports = express();
 require('./configuration')(app, express);
 require('./routes')(app);
 
+app.post('/restaurant/add', routes.restaurantAdd);
+
 // Get the port
 var port = Number(process.env.PORT || 8080);
 // Start listening on the port

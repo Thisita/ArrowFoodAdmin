@@ -22,6 +22,7 @@
 // Imports
 var fs = require('fs');
 var path = require('path');
+var easypost = require('easypost');
 
 module.exports = function(app) {
   // Look for route modules
@@ -32,4 +33,11 @@ module.exports = function(app) {
     // Load the route file
     require('./' + file)(app);
   });
+};
+
+exports.restaurantAdd = function(req, res)
+{
+  easypost.get(req, res, function(data) {
+    data = JSON.parse(data);
+	console.log("I AM WORKING");
 };
