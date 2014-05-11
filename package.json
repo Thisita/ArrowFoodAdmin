@@ -12,7 +12,7 @@
     "morgan": "*",
     "jade": "*",
     "stylus": "*",
-	"easypost": "*",
+	"body-parser": "*",
 	"request": "*"
   },
   "scripts": {

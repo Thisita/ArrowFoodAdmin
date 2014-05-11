@@ -29,6 +29,8 @@ module.exports = function(app, express) {
   app.set('view engine', 'jade');
   app.use(require('stylus').middleware(path.join(__dirname, '../public')));
   app.use(require('serve-static')(path.join(__dirname, '../public')));
+  // parse the body
+  app.use(require('body-parser')());
   
   // dev config
   if(process.env.NODE_ENV == 'development') {
