@@ -29,7 +29,7 @@ function restaurantAdd(req, res) {
 
 function restAdd(req, res) {
 	var data = req.body;
-	console.log(req.body);
+	console.log(req.body.name);
 	//console.log("name: " + data.name + ", address: " + data.address + ", email: " + data.email + ", phone: " + data.phone);
 	//request({
 	 // method: 'POST',
@@ -40,6 +40,7 @@ function restAdd(req, res) {
 	//{
 	//  res.send(response);
 	//});
+	res.send(200);
 }
 
 // Export the route association function
