@@ -31,6 +31,14 @@ function restaurantAdd(req, res) {
 function restAdd(req, res) {
   easypost.get(req, res, function(data) {
 	console.log("I AM WORKING, HERE IS MY DATA " + data);
+	request({
+	  method: 'POST',
+	  uri: 'http://rest-arrow.herokuapp.com/restaurant',
+	  body: JSON.stringify({ name: data.name, addresses: [], emails: [], phones: [] })
+	},
+	function (error, response, body)
+	{
+	};
   });
 }
 
