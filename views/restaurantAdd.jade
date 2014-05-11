@@ -22,7 +22,7 @@ block content
   h3 Add a restaurant
   p Enter restaurant details:
   div
-  form(action='http://rest-arrow.herokuapp.com/restaurant/')
+  form(action='http://rest-arrow.herokuapp.com/restaurant/' id="restaurantAddForm")
     div(data-role='fieldcontain')
       fieldset(data-role='controlgroup')
         label(for='name') Name:
@@ -42,7 +42,7 @@ block content
     div(data-role='fieldcontain')   
       input(type='submit',value='Submit',data-transition='fade', data-theme='c') 
   script.
-    $("form").submit(function(event)
+    $("#restaurantAddForm").submit(function(event)
     {
       // stop form from submitting normally
       event.preventDefault();
