@@ -33,7 +33,12 @@ function restAdd(req, res) {
 	request({
 	  method: 'POST',
 	  uri: 'http://rest-arrow.herokuapp.com/restaurant',
-	  json: JSON.stringify({ name: req.body.name, addresses: [], emails: [], phones: [] })
+	  multipart: [
+	    {
+		  'content-type': 'application/json',
+		  'body': JSON.stringify({ name: req.body.name, addresses: [], emails: [], phones: [] })
+		}
+	  ]
 	},
 	function (error, response, body)
 	{
